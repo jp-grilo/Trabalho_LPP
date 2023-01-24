@@ -1,0 +1,39 @@
+class Base
+ vars id
+ 
+ method showid()
+ begin
+ self.id = 10
+ io.print(self.id)
+ return 0
+ end-method
+
+ method second()
+ end-method
+
+end-class
+
+class Pessoa
+ vars num, aasd, b
+
+ method calc(x,a,b)
+ vars m1,m2,m3
+ begin
+ y = x + self.num
+ io.print(y)
+ y = new Base
+ return y
+ end-method
+end-class
+begin
+
+ vars p, b
+ b = new Base
+ p = new Pessoa
+ p._prototype = b
+ b.id = 111
+ p.num = 123
+ p.id = 321
+ p.showid()
+ p.calc(1024)
+end
